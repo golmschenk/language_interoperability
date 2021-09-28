@@ -1,4 +1,4 @@
-program hello
+program fortran_calling_c_max
     use, intrinsic :: iso_c_binding, only : c_int
     implicit none
     interface
@@ -9,5 +9,4 @@ program hello
         end function
     end interface
     write(*, *) cMax(5, 7)
-    write(*, *) 'Hello world!'
-end program hello
+end program fortran_calling_c_max
