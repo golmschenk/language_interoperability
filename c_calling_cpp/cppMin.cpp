@@ -2,7 +2,7 @@
 #include "cppMin.hpp"
 
 int cppMin(int num1, int num2) {
-    std::cout << "Running C++ min." << std::endl;
+    std::cout << "Message from C++." << std::endl;
     int result;
 
     if (num1 > num2)

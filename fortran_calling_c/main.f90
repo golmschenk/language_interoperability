@@ -8,5 +8,6 @@ program fortran_calling_c_max
             integer(c_int), value :: number1
         end function
     end interface
-    write(*, *) cMax(5, 7)
+    write(*, *) "Message from Fortran."
+    write(*, *) "Maximum calculated in C with values passed from and returned to Fortran:", cMax(5, 7)
 end program fortran_calling_c_max
