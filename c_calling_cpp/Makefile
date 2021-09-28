@@ -1,4 +1,3 @@
-FC = gfortran
 CC = gcc
 CXX = g++
 
