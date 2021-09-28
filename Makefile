@@ -1,29 +1,11 @@
 FC = gfortran
-CXX = g++
+CC = gcc
 
-UNAME := $(shell uname -s)
+hello.exe: hello.o max.o
+	${FC} hello.o max.o -o hello.exe
 
-FCFLAGS = -Wall -Wextra
-CCFLAGS = -Wall -Wextra
-ifeq ($(UNAME_S),Darwin)
-	LDFLAGS = -lstdc++
-else
-	LDFLAGS = -lc++
-endif
+hello.o: hello.f90
+	${FC} -c hello.f90
 
-all: test.x
-test.o : foo_mod.o
-
-%.x : %.o foo_mod.o foo_capi.o Foo.o
-	${FC} $^ -o $@ ${LDFLAGS}
-
-%.o : %.f90
-	${FC} ${FCFLAGS} -c $< -o $@
-
-%.o : %.cpp
-	${CXX} ${CCFLAGS} -c $^ -o $@
-
-.PHONY : clean
-
-clean :
-	${RM} -rf *.o *.mod test.x
+max.o: max.c
+	${CC} -c max.c
