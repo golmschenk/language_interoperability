@@ -2,7 +2,7 @@ program fortran_calling_c_max
     use, intrinsic :: iso_c_binding, only : c_int
     implicit none
     interface
-        integer(c_int) function cMax(number0, number1) bind(c, name = 'max')
+        integer(c_int) function cMax(number0, number1) bind(c, name = 'cMax')
             import :: c_int
             integer(c_int), value :: number0
             integer(c_int), value :: number1
