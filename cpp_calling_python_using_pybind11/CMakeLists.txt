@@ -3,5 +3,5 @@ project(cpp_calling_python_using_pybind11)
 
 find_package(pybind11 REQUIRED)
 
-add_executable(cpp_calling_python_using_pybind11 main.cpp)
+add_executable(main.cpp)
 target_link_libraries(cpp_calling_python_using_pybind11 PRIVATE pybind11::embed)
