@@ -1,0 +1,13 @@
+[package]
+name = "python_calling_rust_via_pyo3"
+version = "0.1.0"
+authors = ["Greg Olmschenk <greg@olmschenk.com>"]
+edition = "2018"
+
+[lib]
+name = "rust_library"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies.pyo3]
+version = "0.14.5"
+features = ["extension-module"]
