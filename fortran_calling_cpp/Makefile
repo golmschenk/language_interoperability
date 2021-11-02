@@ -1,5 +1,5 @@
 FC = gfortran
-CC = gcc
+CXX = g++
 
 all: main.exe
 
