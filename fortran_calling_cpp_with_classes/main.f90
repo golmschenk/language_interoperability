@@ -1,4 +1,4 @@
-program fortran_calling_c_max
+program main
     use, intrinsic :: iso_c_binding, only : c_ptr, c_float
     implicit none
     interface
@@ -41,4 +41,4 @@ program fortran_calling_c_max
     position_ = get_robot_position(robot_)
     write(*, *) "Position in Fortran taken from the C++ object ", position_, "."
     call destroy_robot(robot_)
-end program fortran_calling_c_max
+end program main
