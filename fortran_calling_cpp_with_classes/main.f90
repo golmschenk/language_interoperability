@@ -12,14 +12,14 @@ program main
         subroutine destroy_robot(robot) bind(c, name = 'destroy_robot')
             import :: c_ptr
             implicit none
-            type(c_ptr) :: robot
+            type(c_ptr), value :: robot
         end subroutine
     end interface
     interface
         function get_robot_position(robot) bind(c, name = 'get_robot_position')
             import :: c_ptr, c_float
             implicit none
-            type(c_ptr) :: robot
+            type(c_ptr), value :: robot
             real(c_float) :: get_robot_position
         end function
     end interface
@@ -27,7 +27,7 @@ program main
         subroutine move_robot_forward(robot, distance) bind(c, name = 'move_robot_forward')
             import :: c_ptr, c_float
             implicit none
-            type(c_ptr) :: robot
+            type(c_ptr), value :: robot
             real(c_float), value :: distance
         end subroutine
     end interface
