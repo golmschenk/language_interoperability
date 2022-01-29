@@ -1,5 +1,5 @@
 [package]
-name = "c_calling_rust"
+name = "fortran_calling_rust"
 version = "0.1.0"
 edition = "2021"
 
