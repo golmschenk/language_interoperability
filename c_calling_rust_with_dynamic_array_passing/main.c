@@ -19,10 +19,10 @@ int main() {
     memcpy(input_array, stack_memory_input_array, sizeof(stack_memory_input_array));
     float (*output_array)[second_dimension_length] = malloc(sizeof(int[first_dimension_length][second_dimension_length * 2]));
     printf("Input array in C.\n");
-    print_2d_array(first_dimension_length, 2, input_array);
+    print_2d_array(first_dimension_length, second_dimension_length, input_array);
     add_one_and_tile_to_double_width(*input_array, first_dimension_length, *output_array);
     printf("Output array in C.\n");
-    print_2d_array(first_dimension_length, 4, output_array);
+    print_2d_array(first_dimension_length, second_dimension_length * 2, output_array);
     free(input_array);
     free(output_array);
     return 0;
