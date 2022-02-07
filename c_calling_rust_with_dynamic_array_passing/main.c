@@ -20,6 +20,8 @@ int main() {
     float (*output_array)[second_dimension_length] = malloc(sizeof(int[first_dimension_length][second_dimension_length * 2]));
     printf("Input array in C.\n");
     print_2d_array(first_dimension_length, second_dimension_length, input_array);
+    // In this case we assume the first dimension is determined at runtime and must be passed.
+    // In this case we assume the second dimension is static, and known in advance by the Rust side of things.
     add_one_and_tile_to_double_width(*input_array, first_dimension_length, *output_array);
     printf("Output array in C.\n");
     print_2d_array(first_dimension_length, second_dimension_length * 2, output_array);
