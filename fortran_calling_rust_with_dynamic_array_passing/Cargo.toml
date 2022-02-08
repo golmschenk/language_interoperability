@@ -1,0 +1,11 @@
+[package]
+name = "fortran_calling_rust_with_dynamic_array_passing"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libc = "*"
+ndarray = "*"
+
+[lib]
+crate-type = ["cdylib"]
