@@ -1,4 +1,4 @@
-from python_module import ffi
+from python_library import ffi
 
 @ffi.def_extern()
 def multiply(factor0: float, factor1: float) -> float:

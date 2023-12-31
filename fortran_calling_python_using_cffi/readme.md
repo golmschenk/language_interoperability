@@ -1,11 +1,18 @@
 # Fortran calling Python using CFFI.
 
-## Incomplete
+An example of Fortran calling Python using CFFI.
 
-The current setup runs, but it requires a few manual steps. There is certainly a way to do this better. However, due to several parts feeling a bit to messy, I didn't pursue this route farther yet.
+## Usage
 
-## Current steps
-1. Build the Python shared library by going to `src` and running `python python_module_api_build.py`.
-2. Build the Fortran executable via CMake.
-3. Copy the Python shared library to the same directory as the Fortran executable.
-4. Run the Fortran executable.
+1. Build using the CMake file, using standard build commands (e.g., `cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug` then `cmake --build build --config Debug `)
+2. Run the built Fortran executable with `build/fortran_executable`.
+
+## Language interoperability explanation
+* Fortran is calling Python in this case.
+* The CFFI package creates the interface between two.
+* CMake is used as the build system.
+* CMake also directly calls the Python script to build the shared library with CFFI.
+
+## Caveats
+* `dylib` has been hard coded in the CMake script, which will only work on macOS. It shouldn't be too hard to adapt to be general, but I have not yet done this.
+* The way CMake is building the shared library though direct Python calls probably has plenty of failure points that are not checked for. This can probably be improved on. 
