@@ -2,7 +2,7 @@
 
 An example of Rust calling Python through pyo3.
 
-## Running
+## Usage
 
 1. Build using the CMake file, using standard build commands (e.g., `cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug` then `cmake --build build --config Debug `)
 2. Run the built Rust executable with `build/rust_executable`.
