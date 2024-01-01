@@ -3,7 +3,7 @@ name = "python_library"
 version = "0.1.0"
 description = ""
 authors = ["golmschenk <greg@olmschenk.com>"]
-readme = "README.md"
+readme = "readme.md"
 
 
 [tool.poetry.dependencies]
