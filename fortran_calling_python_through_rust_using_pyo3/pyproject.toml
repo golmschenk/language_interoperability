@@ -1,0 +1,11 @@
+[project]
+name = "python_library"
+version = "0.1.0"
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["scikit-build-core==0.7.1", "fypp==3.2"]
+build-backend = "scikit_build_core.build"
+
+[tool.scikit-build]
+build-dir = "build"
